@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif; /* Global font */
+}
+
+
+body {
+    background-color: #e9f5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Karla', sans-serif; /* Global font */
+}
+
+.form-wrapper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 550px;
+    text-align: left;
+    
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 5px;
+   margin-bottom: 15px;
+
+}
+
+.input-field {
+    margin-bottom: 15px;
+    width: 100%;
+    accent-color: green; 
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-field span {
+    color: hsl(187, 24%, 22%);
+}
+
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.input-field textarea {
+    resize: none;
+}
+
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.radio-button {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+  input[type="radio"] {
+    accent-color: green; /* Makes the radio button green when selected */
+    margin-right: 10px; /* Adds space between the radio button and label */
+}
+  
+
+.radio-button:hover {
+    border-color: green;
+}
+
+.radio-button input[type="radio"]:checked + label {
+    border-color: green;
+}
+
+/* Radio button default styling */
+.radio-button input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+
+
+
+button {
+    background-color: #0c8f75;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #096d59;
+}
+
+.input-field input:hover,
+.input-field textarea:hover {
+    border-color: green; /* Change to green on hover */
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-color: green; /* Green border when focused */
+    outline: none; /* Remove default outline */
+}
+
+
+
+#success-message-container {
+    display: none; /* Hidden by default */
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below the message */
+}
+
+#success-message {
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below the message */
+    background-color: black; /* Background color */
+    padding: 20px; /* Padding around the message */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+}
+
+.inline-message {
+    display: flex; /* Use flexbox for inline alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.inline-message img {
+    width: 30px; /* Image width */
+    height: 30px; /* Image height */
+    margin-right: 10px; /* Space between image and text */
+}
+
+#success-message p {
+    margin-top: 10px; /* Space between the inline message and the paragraph */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+
+.form-wrapper {
+    margin-top: 20px; /* Space between success message and form */
+}
+
+
+@media (max-width: 375px) {
+    .form-wrapper {
+        width: 85%; /* Adjust the form width to fit the screen */
+        padding: 10px; /* Reduce padding */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center the form */
+    }
+
+    h2 {
+        font-size: 18px; /* Adjust font size for headings */
+        margin-bottom: 10px; /* Reduce margin */
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack input fields vertically */
+        gap: 5px; /* Reduce gap */
+        margin-bottom: 10px; /* Compress spacing between input groups */
+    }
+
+    .input-field {
+        width: 100%; /* Ensure inputs are full width */
+    }
+
+    .input-field input, .input-field textarea {
+        padding: 8px; /* Reduce padding inside inputs */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons vertically */
+        width: 100%; /* Ensure full width on small devices */
+    }
+
+    .radio-button {
+        width: 100%; /* Radio button full width */
+        padding: 8px; /* Reduce padding */
+    }
+
+    button {
+        padding: 10px; /* Smaller padding for button */
+        font-size: 14px; /* Smaller font size */
+        width: 100%; /* Ensure button takes full width */
+        cursor: pointer;
+    }
+
+    #success-message-container {
+        padding: 10px; /* Reduce padding for success message */
+    }
+
+    .inline-message img {
+        width: 25px; /* Adjust image size */
+        height: 25px;
+    }
+
+    #success-message {
+        padding: 10px; /* Reduce padding for mobile view */
+    }
+
+    /* General Form Spacing Adjustments */
+    .input-field, .radio-group, button {
+        margin-bottom: 10px; /* Compress spacing between elements */
+        cursor: pointer;
+    }
+}

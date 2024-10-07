@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport for responsiveness -->
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <style>
+    /* Attribution styling, you can remove this block */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <!-- Success message container -->
+    <div id="success-message-container" style="display: none;">
+        <div id="success-message">
+            <div class="inline-message">
+                <img src="assets/images/icon-checkbox-check.svg" alt="Success">
+                <span>Message sent!</span>
+            </div>
+            <p>Thanks for completing the form, we'll be in touch soon!</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" action="/submit" method="POST">
+        <h2>Contact Us</h2>
+
+        <!-- First Name and Last Name -->
+        <div class="input-group">
+            <div class="input-field">
+                <label for="first-name">First Name <span>*</span></label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="input-field">
+                <label for="last-name">Last Name <span>*</span></label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="input-field">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Query Type -->
+        <div class="input-field">
+            <label>Query Type <span>*</span></label>
+            <div class="radio-group">
+                <label class="radio-button">
+                    <input type="radio" name="query-type" value="General Enquiry" required>
+                    <span class="button-label">General Enquiry</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="query-type" value="Support Request" required>
+                    <span class="button-label">Support Request</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="input-field">
+            <label for="message">Message <span>*</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- Consent Checkbox -->
+        <div class="input-field">
+            <label>
+                <input type="checkbox" name="consent" required>
+                I consent to being contacted by the team <span>*</span>
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+<script src="script.js"></script>
+</html>
